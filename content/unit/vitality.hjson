@@ -1,0 +1,75 @@
+name: Vitality
+desciption: heals nearby units, places missile sentryes and turns keeper upon death
+health: 7505
+flying: true
+rotateSpeed: 1.5
+lowAltitude: true
+hitSize: 56
+armor: 5
+speed: 0.5
+accel: 0.2
+drag: 0.09
+abilities: [{
+type: SpawnDeathAbility
+unit: keeper
+amount: 1
+}]
+weapons: [
+{
+name: vitalityGun
+type: RepairBeamWeapon
+repairSpeed: 3
+x: 15
+y: -20
+targetUnits: true
+targetBuildings: true
+controllable: false
+autoTarget: true
+bullet: {
+repair: 5
+damage: 3
+maxRange: 250
+range: 250
+}
+}
+{
+name: sentryGun2
+mirror: false
+x: 0
+rotate: true
+rotateSpeed: 1.2
+reload: 165
+shoot: {
+shots: 8
+type: ShootAlternate
+barrels: 4
+spread: 4.5
+shotDelay: 5
+}
+shootSound: missile
+inaccuracy: 45
+damage: 7
+bullet: {
+type: MissileBulletType
+shootEffect: shootHeal
+damage: 7
+splashDamage: 25
+splashDamageRadius: 46
+healPercent: 2.5
+collidesTeam: true
+lifetime: 145
+speed: 2
+weaveScl: 6
+weaveMag: 1
+hominhPower: 0.1
+homingRange: 34
+width: 8
+height: 12
+frontColor: 84f595
+backColor: 61ad7e
+trailColor: 84f595
+}
+}
+]
+buildSpeed: 4
+commands: [move, repair, rebuild]

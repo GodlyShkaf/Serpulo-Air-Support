@@ -1,0 +1,53 @@
+name: Sustainability
+description: heals nearby allyes with repair gun and deploys sentryes
+health: 850
+flying: true
+hitSize: 36
+armor: 4
+accel: 0.1
+drag: 0.05
+weapons: [
+{
+type: RepairBeamWeapon
+name: buildingRepairGun
+repair: 6
+mirror: false
+x: 0
+shootY: 5
+beamWidth: 0.9
+targetUnits: true
+targetBuildings: false
+controllable: false
+autoTarget: true
+aimDst: 10
+bullet: {
+type: BulletType
+maxRange: 210
+range: 210
+}
+}
+{
+name: sentrySpawner
+x: 15
+reload: 160
+shootSound: bang
+alwaysShooting: true
+bullet: {
+speed: 2
+lifetime: 180
+drag: 0.02
+sprite: sas-sentry1
+width: 15
+height: 15
+fragBullets: 1
+fragBullet: {
+width: 0
+height: 0
+lifetime: 1
+spawnUnit: sentry1
+}
+}
+}
+]
+buildSpeed: 3
+commands: [move, repair, rebuild]

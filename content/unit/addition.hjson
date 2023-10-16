@@ -1,0 +1,45 @@
+name: Addition
+description: Weak flying unit, equipped with two unit repair points and building tepair turret, can not deal damage
+flying: true
+hitSize: 14
+speed: 0.9
+accel: 0.08
+drag: 0.05
+health: 85
+armor: 0
+weapons: [
+{
+type: RepairBeamWeapon
+name: buildingRepairGun
+repair: 2
+mirror: false
+x: 0
+beamWidth: 0.7
+targetUnits: true
+targetBuildings: true
+controllable: true
+autoTarget: false
+aimDst: 10
+bullet: {
+type: BulletType
+maxRange: 140
+range: 140
+}
+}
+{
+type: RepairBeamWeapon
+name: unitRepairGun
+repair: 0.15
+beamWidth: 0.4
+targetUnits: true
+targetBuildings: false
+aimDst: 10
+bullet: {
+type: BulletType
+maxRange: 140
+range: 140
+}
+}
+]
+buildSpeed: 1.3
+commands: [move, repair, rebuild]
