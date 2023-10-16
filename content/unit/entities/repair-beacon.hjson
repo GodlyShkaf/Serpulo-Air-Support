@@ -1,0 +1,17 @@
+name: repair beacon
+health: 100
+armor: 0
+speed: 0
+drawCell: false
+abilities: [{
+type: RegenAbility
+amount: -1
+}
+{
+type: StatusFieldAbility
+duration: 25
+reload: 20
+range: 48
+effect: healing
+}]
+hidden: true
