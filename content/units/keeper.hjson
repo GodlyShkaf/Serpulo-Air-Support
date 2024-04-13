@@ -1,0 +1,32 @@
+name: Keeper
+flying: true
+health: 350
+hitSize: 26
+armor: 4
+speed: 0.5
+accel: 0.2
+drag: 0.03
+description: places repair beacons, effect does not stack(!!!)
+weapons: [{
+alwaysShooting: true
+reload: 180
+mirror: false
+x: 0
+y: 3
+bullet: {
+speed: 1
+drag: 0.03
+lifetime: 70
+sprite: sas-repair-beacon
+fragBullets: 1
+fragBullet: {
+lifetime: 1
+width: 0
+height: 0
+speed: 0
+spawnUnit: repair-beacon
+}
+}
+}]
+buildSpeed: 2.3
+commands: [move, repair, rebuild]

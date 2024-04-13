@@ -1,0 +1,31 @@
+name: sentry gun
+health: 120
+armor: 1
+speed: 0
+abilities: [{
+type: RegenAbility
+amount: -0.3
+}]
+rotateSpeed: 0
+hitSize: 12
+weapons: [{
+name: sentryGun1
+mirror: false
+x: 0
+rotate: true
+rotateSpeed: 2
+reload: 40
+shoot: {
+type: ShootSpread
+shots: 3
+spread: 2
+}
+bullet: {
+damage: 7
+lifetime: 60
+speed: 2.5
+width: 5
+height: 7
+}
+}]
+hidden: true
